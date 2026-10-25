@@ -1,0 +1,23 @@
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#04061a;--fg:#f2f5ff;--gold:#ffd25a;--cy:#52f0ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden;touch-action:none;user-select:none}
+body{display:flex;justify-content:center;align-items:center}
+#w{position:relative;width:min(100vw,calc(100dvh*16/9));aspect-ratio:16/9}
+canvas{width:100%;height:100%;display:block}
+#ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2%;gap:.6em;background:rgba(4,6,26,.8);font-size:clamp(11px,2.4vw,17px)}
+#ov h1,#intro h1{margin:0;font-size:2.3em;background:linear-gradient(90deg,#ff5d6c,#ffb84d,#ffe66b,#5df08f,#52f0ff,#8a7bff,#ff7ad9);-webkit-background-clip:text;background-clip:text;color:transparent}
+#ov p{margin:0;line-height:1.8;max-width:42ch}
+#ov small{opacity:.7}
+button{font:inherit;font-weight:700;padding:.6em 2.4em;border:0;border-radius:999px;background:var(--gold);color:#1a1300;cursor:pointer}
+button:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+#mu{position:absolute;top:2.5%;right:2%;z-index:5;width:clamp(30px,6vw,44px);height:clamp(30px,6vw,44px);padding:0;font-size:clamp(14px,3vw,20px);background:rgba(10,16,48,.7);color:var(--fg);border:1px solid rgba(127,243,255,.4)}
+#lv{display:flex;gap:.6em}
+#lv button{padding:.4em 1.2em;font-size:.95em;background:transparent;color:var(--fg);border:1.5px solid rgba(127,243,255,.5)}
+#lv button.sel{background:var(--gold);color:#1a1300;border-color:var(--gold)}
+#ld{opacity:.9}
+#intro{position:absolute;inset:0;z-index:3;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2%;gap:.6em;background:radial-gradient(ellipse at 50% 40%,rgba(40,60,140,.55),rgba(4,6,26,.96));font-size:clamp(11px,2.4vw,17px);cursor:pointer;overflow:auto}
+#intro img{width:4.8em;height:4.8em;object-fit:contain;filter:drop-shadow(0 0 14px rgba(127,243,255,.6))}
+#intro h1{margin:0;font-size:2.2em}
+#intro p{margin:0;line-height:1.65;max-width:60ch;font-size:.95em}
+#intro small{opacity:.75;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
